@@ -1,8 +1,9 @@
 import React from 'react';
+import '../style/choose.scss'
 class Choose extends React.Component {
     render() {
         return (
-            <div>Choose</div>
+            <div className="choose">Choose</div>
         );
     }
 }

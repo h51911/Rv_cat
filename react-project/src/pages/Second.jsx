@@ -1,8 +1,12 @@
 import React from 'react';
+
 class Second extends React.Component {
+
     render() {
+
         return (
-            <div>Second</div>
+            <div>二手车界面</div>
+
         );
     }
 }

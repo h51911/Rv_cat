@@ -3,7 +3,8 @@ import '../style/choose.scss'
 class Choose extends React.Component {
     render() {
         return (
-            <div className="choose">Choose</div>
+            <div className="choose">Choose
+            <p>fdsafdsafdsa</p></div>
         );
     }
 }

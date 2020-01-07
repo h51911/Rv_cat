@@ -1,16 +1,20 @@
 import React from 'react';
-import { HashRouter, Route, Link, NavLink, Switch, Redirect, withRouter } from 'react-router-dom';
-import './App.css';
+import { Route, Link, NavLink, Switch, Redirect, withRouter } from 'react-router-dom';
+import './App.scss';
 import Home from './pages/Home.jsx';
 import Choose from './pages/Choose.jsx';
 import Second from './pages/Second.jsx';
 import Mine from './pages/Mine.jsx';
+import './style/font_hr5tn4apse8/iconfont.css';
+import { TabBar } from 'antd-mobile';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div className="App">
-
         <Switch>
           <Route path='/home' component={Home} />
           <Route path='/choose' component={Choose} />
@@ -22,9 +26,31 @@ class App extends React.Component {
           {/* 404 */}
           <Redirect to="/notfound" />
         </Switch>
-      </div>
+        <div className="tab">
+          <ul>
+            <li>
+              <NavLink to="/home" activeStyle={{ color: '#4284d9' }}>首页</NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/choose" activeStyle={{ color: '#4284d9' }}>选车</NavLink>
+            </li>
+            <li>
+              <div className="ctn">
+                <span className="iconfont icon-jiahao"></span>
+              </div>
+            </li>
+            <li>
+              <NavLink to="/second" activeStyle={{ color: '#4284d9' }}>二手</NavLink>
+            </li>
+            <li>
+              <NavLink to="/mine" activeStyle={{ color: '#4284d9' }}>我的</NavLink>
+            </li>
+          </ul>
+        </div>
+      </div >
     )
   };
 }
-
+App = withRouter(App);
 export default App;

@@ -1,0 +1,72 @@
+.about_us {
+    display: inline-block;
+    text-align: center;
+    // width: 100%;
+    height: 3.146667rem;
+    padding-top: .48rem;
+    padding-bottom: 1.6rem;
+    margin-top: .266667rem;
+
+    .line {
+        width: 100%;
+        height: .266667rem;
+        background: rgb(242, 247, 252);
+    }
+
+    .tips {
+        text-align: center;
+        width: 10rem;
+        height: .613333rem;
+        color: #666666;
+        font-size: .373333rem;
+        margin-top: .266667rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        dl {
+            height: .533333rem;
+            line-height: .613333rem;
+            margin: auto;
+
+            // display: flex;
+            // justify-content: sp
+            float: left;
+            // display: inline-block;
+            // text-align: center;
+
+            dt {
+                float: left;
+                // width: 1.6rem;
+                text-align: center;
+            }
+
+            dd {
+                float: left;
+                padding: 0 .206667rem;
+            }
+        }
+    }
+
+    .copyright {
+        width: 8rem;
+        height: 1.173333rem;
+        padding-top: .48rem;
+        margin: auto;
+        margin-top: .426667rem;
+        font-size: .32rem;
+        color: #999999;
+
+        .p1,
+        .p2 {
+            width: 8rem;
+            height: .586667rem;
+            line-height: .586667rem;
+
+            a {
+                font-size: .373333rem;
+                color: #999999;
+            }
+        }
+    }
+}

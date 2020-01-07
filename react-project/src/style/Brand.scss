@@ -1,0 +1,31 @@
+.brand {
+    position: relative;
+    background: red;
+
+    /* 导航-字母 */
+    .nav {
+        position: fixed;
+        right: .266667rem;
+        top: 1.2rem;
+        height: 1.2rem;
+
+        ul {
+            // width: .8rem;
+
+            li {
+                width: .38rem;
+                height: .533333rem;
+                line-height: .533333rem;
+                text-align: center;
+
+                // width: .8rem;
+                a {
+                    text-decoration: none;
+                    color: #4284d9;
+                    font-size: 14px;
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// .choose{
+//     color: red;
+// }
+.Tab {
+    display: flex;
+    justify-content: space-around;
+    height: 1.12rem;
+    line-height: 1.12rem;
+    text-align: center;
+    font-size: .48rem;
+    background: white;
+    // #changeTab {
+    //     flex: 1;
+
+    // }
+
+    .active {
+        // flex: 1;
+        // text-align: center;
+        // font-size: .48rem;
+        width: 33.33%;
+        border-bottom: .053333rem solid blue;
+        color: blue;
+    }
+    .d1{
+        width: 33.33%;
+    }
+}

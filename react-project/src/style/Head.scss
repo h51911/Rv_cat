@@ -1,5 +1,5 @@
 .nav {
-    width: 10rem;
+    width: 100%;
     height: 1.2rem;
     background: #4284d9;
     display: flex;
@@ -14,7 +14,7 @@
 
         .span_1 {
             color: #ffffff;
-            font-size: .8rem;
+            font-size: .5rem;
             padding-right: .053333rem;
         }
 
@@ -24,6 +24,7 @@
             display: inline-block;
 
 
+
         }
     }
 
@@ -31,6 +32,12 @@
         span {
             font-size: .48rem;
             color: #ffffff;
+        }
+
+        i {
+            color: #ffffff;
+            font-size: .54rem;
+            padding-left: .08rem;
         }
 
     }

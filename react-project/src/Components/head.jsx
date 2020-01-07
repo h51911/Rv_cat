@@ -2,7 +2,7 @@ import React from "react";
 import '../style/Head.scss'
 
 //引入字体图标
-import '../utils/iconfont/iconfont.js'
+import '../utils/iconfont/iconfont.css'
 
 function Head() {
     return (
@@ -14,7 +14,7 @@ function Head() {
             </p>
             <div className="p_2">
                 <span>二手房车</span>
-                <i></i>
+                <i ></i>
             </div>
             <p className="p_3">首页</p>
         </div>

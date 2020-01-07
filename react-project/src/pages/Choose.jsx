@@ -1,7 +1,7 @@
 import React from "react";
-import {Route,Switch,withRouter,Redirect} from 'react-router-dom'
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom'
 /* 样式 */
-import "../style/Choose.scss";
+import "../style/choose.scss";
 
 /* antd */
 import { Tabs, WhiteSpace } from "antd-mobile";
@@ -27,22 +27,22 @@ class Choose extends React.Component {
   };
 
   /* 点击切换 */
-  changeTab=(path)=>{
-    
+  changeTab = (path) => {
+
     this.setState({
-      activeKey:path
+      activeKey: path
     })
 
     console.log(path)
-    this.props.history.push('/choose'+path);
+    this.props.history.push('/choose' + path);
   }
 
   /*  */
-  componentDidMount(){
+  componentDidMount() {
     // this.activeKey='t1';
     // this.changeTab()
     // let activeKey=this.state.activeKey
-    this.props.history.push('/choose'+this.state.activeKey);
+    this.props.history.push('/choose' + this.state.activeKey);
     // console.log('this.activeKey',this.activeKey)
   }
 
@@ -55,23 +55,23 @@ class Choose extends React.Component {
 
         {/* 切换 */}
         <div className={'Tab'}>
-           {list.map(item=>{
-              return (
-         
-                  <div 
-                  className={item.path==activeKey?'active d1':'d1'}
-                  key={item.title}
-                  onClick={this.changeTab.bind(this,item.path)}
-                  >
-                  {item.title}
-                 
-                  </div>
-                 
-        
-                )
-              
-           })}
-           
+          {list.map(item => {
+            return (
+
+              <div
+                className={item.path == activeKey ? 'active d1' : 'd1'}
+                key={item.title}
+                onClick={this.changeTab.bind(this, item.path)}
+              >
+                {item.title}
+
+              </div>
+
+
+            )
+
+          })}
+
         </div>
         {/* <Brand></Brand>
         <Condition></Condition>

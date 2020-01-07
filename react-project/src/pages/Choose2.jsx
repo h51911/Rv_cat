@@ -1,6 +1,6 @@
 import React from "react";
 /* 样式 */
-import "../style/Choose.scss";
+import "../style/choose.scss";
 /* antd */
 import { Tabs, WhiteSpace } from "antd-mobile";
 import { StickyContainer, Sticky } from "react-sticky";

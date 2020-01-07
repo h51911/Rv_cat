@@ -1,6 +1,96 @@
 .home {
     .header {
         height: 1.2rem;
-        background-color: red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+
+        .head-left {
+            padding-left: .4rem;
+
+            img {
+                border-radius: 50%;
+                width: .693333rem;
+                height: .693333rem;
+                margin-top: .213333rem;
+            }
+        }
+
+        .images {
+            img {
+                height: 1.2rem;
+
+            }
+        }
+
+        .head-right {
+            padding-right: .4rem;
+
+            span {
+                font-size: .56rem;
+            }
+        }
+    }
+
+    main {
+        background-color: #fff;
+
+        .am-carousel-wrap {
+            float: right;
+            margin-bottom: .266667rem;
+
+            .am-carousel-wrap-dot-active>span {
+                background: #FF4F53;
+            }
+
+            .am-carousel-wrap-dot {
+                float: right;
+
+                span {
+                    width: .160333rem;
+                    height: .166333rem;
+                    margin: 0 .053333rem;
+                }
+            }
+        }
+
+        .lunbotu {
+            width: 9.226667rem;
+            height: 3.92rem;
+            margin: auto;
+            border-radius: .266667rem;
+            touch-action: none;
+        }
+    }
+
+    .buytop {
+        display: flex;
+        padding: 0 .266667rem;
+
+        li {
+            box-sizing: border-box;
+            width: 20%;
+            text-align: center;
+            height: 2.506667rem;
+            padding-top: .466667rem;
+
+            img {
+
+                width: .96rem;
+                height: .96rem;
+            }
+
+            span {
+                display: block;
+                margin-top: .106667rem;
+            }
+        }
+
+    }
+
+    .line {
+        height: .266667rem;
+        background-color: #F2F7FC;
     }
 }

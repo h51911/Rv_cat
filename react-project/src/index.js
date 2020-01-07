@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './style/base.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { HashRouter, Route, Link, NavLink, Switch, Redirect, withRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+import 'antd-mobile/dist/antd-mobile.css'
 ReactDOM.render(
     <HashRouter>
         <App />

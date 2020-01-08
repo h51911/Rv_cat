@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AboutUs from "../components/AboutUs";
+import axios from "axios";
 import "../style/Brand.scss";
 class Brand extends Component {
   state = {
@@ -27,25 +28,46 @@ class Brand extends Component {
       "Z"
     ],
     key: "",
-    isok: "none"
+    isok: "none",
+    data: []
   };
 
   changeNav = item => {
-    console.log(item);
+    // console.log(item);
     this.setState({
       key: item,
       isok: "block"
     });
+    /* 1秒后隐藏 */
     setTimeout(() => {
       this.setState({
         isok: "none"
       });
     }, 1000);
+    console.log(item);
   };
 
+  async componentDidMount() {
+    /*发送请求 */
+    let { data } = await axios.get("http://localhost:3001/zheng/brand");
+    // console.log(data);
+
+    this.setState({
+      data
+    });
+    /* 监听滚动 */
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  /* 滚动 */
+  handleScroll(title) {
+    console.log(window.scrollY, title);
+  }
+
   render() {
-    let { navData, key, isok } = this.state;
+    let { navData, key, isok, data } = this.state;
     // console.log("navData", navData);
+    // console.log("data", data);
     return (
       // <React.Fragment >
       <div className="brand" style={{ background: "white" }}>
@@ -180,102 +202,37 @@ class Brand extends Component {
             </div>
           </div>
 
-          {/* ABCD */}
+          {/* ABCD >>>>>>>>>>>>>>>>>>>>》》》》》》》*/}
           <div className="boxcar">
-            <div className="list">
-              {/* -----标题------- */}
-              <div className="car_title">
-                <span>A</span>
-              </div>
-              {/* -----内容----- */}
-              <div className="car_all">
-                <ul>
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="list">
-              {/* -----标题------- */}
-              <div className="car_title">
-                <span>A</span>
-              </div>
-              {/* -----内容----- */}
-              <div className="car_all">
-                <ul>
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a>
-                      <img
-                        src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                        alt=""
-                      />
-                      <span>房车</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            {data.map(item => {
+              return (
+                <div className="list" key={item.title}>
+                  {/* -----标题------- */}
+                  <div
+                    className="car_title"
+                    onChange={this.handleScroll.bind(this, item.title)}
+                  >
+                    <span>{item.title}</span>
+                  </div>
+
+                  {/* -----内容----- */}
+                  <div className="car_all">
+                    <ul>
+                      {item.item.map(ele => {
+                        return (
+                          <li key={ele.title}>
+                            <a>
+                              <img src={ele.img} alt="" />
+                              <span>{ele.title}</span>
+                            </a>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 

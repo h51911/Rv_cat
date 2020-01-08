@@ -1,51 +1,41 @@
-import React, {
-    Component
-} from 'react';
+import React, { Component } from "react";
 
-import '../style/Hot.scss'
-import AboutUs from '../components/AboutUs';
+import "../style/Hot.scss";
+import AboutUs from "../components/AboutUs";
+import axios from "axios";
 class Hot extends Component {
-
-    render() {
-        return (
-            /* 列表 */
-        <div style={{background:'white'}} className={'hot_car'}>
+  state = {
+    data: []
+  };
+  async componentDidMount() {
+    /*发送请求 */
+    let { data } = await axios.get("http://localhost:3001/zheng/car");
+    console.log(data);
+    this.setState({
+      data
+    });
+  }
+  render() {
+    let { data } = this.state;
+    return (
+      /* 列表 */
+      <div style={{ background: "white" }} className={"hot_car"}>
         {/* Hot */}
-           <ul>
-               <li>
-                    <img src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg" alt=""/>
-                    <p className={'p1'}>长城览众风骏C4房车</p>
-                    <p className={'p2'}>23.88万</p>
-               </li>
-               <li>
-                    <img src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg" alt=""/>
-                    <p className={'p1'}>长城览众风骏C4房车</p>
-                    <p className={'p2'}>23.88万</p>
-               </li><li>
-                    <img src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg" alt=""/>
-                    <p className={'p1'}>长城览众风骏C4房车</p>
-                    <p className={'p2'}>23.88万</p>
-               </li><li>
-                    <img src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg" alt=""/>
-                    <p className={'p1'}>长城览众风骏C4房车</p>
-                    <p className={'p2'}>23.88万</p>
-               </li><li>
-                    <img src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg" alt=""/>
-                    <p className={'p1'}>长城览众风骏C4房车</p>
-                    <p className={'p2'}>23.88万</p>
-               </li><li>
-                    <img src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg" alt=""/>
-                    <p className={'p1'}>长城览众风骏C4房车</p>
-                    <p className={'p2'}>23.88万</p>
-               </li><li>
-                    <img src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg" alt=""/>
-                    <p className={'p1'}>长城览众风骏C4房车</p>
-                    <p className={'p2'}>23.88万</p>
-               </li>
-           </ul>
+        <ul>
+          {data.map(item => {
+            return (
+              <li key={item.title}>
+                <img src={item.img} alt="" />
+                <p className="p1">{item.title}</p>
+                <p className="p2">{item.price}</p>
+              </li>
+            );
+          })}
+        </ul>
         {/* 底部 */}
         <AboutUs></AboutUs>
-       </div>)
-    }
+      </div>
+    );
+  }
 }
 export default Hot;

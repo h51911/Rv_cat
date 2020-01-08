@@ -1,7 +1,11 @@
 import React from 'react';
 import "../style/Home.scss";
+import noavatar from "../assets/noavatar_middle.gif";
 import Lunbotu from "../components/Lunbotu.jsx"
 import Buytop from "../components/Buytop.jsx"
+import Pb from "../components/Pb.jsx";
+import AboutUs from "../components/AboutUs.js";
+
 class Home extends React.Component {
     constructor() {
         super();
@@ -20,7 +24,7 @@ class Home extends React.Component {
             <div className="home">
                 <div className="header">
                     <div className="head-left">
-                        <img src="https://m.rv28.com/uc_server/avatar.php?uid=0&size=middle" alt="" />
+                        <img src={noavatar} alt="" />
                     </div>
                     <div className="images"><img src="https://www.rv28.com/rv28/touch/indexlogo.png?rvmao" alt="" /></div>
                     <div className="head-right">
@@ -31,7 +35,9 @@ class Home extends React.Component {
                     <Lunbotu />
                     <Buytop />
                     <div className="line"></div>
+                    <Pb />
                 </main>
+                <AboutUs>156</AboutUs>
             </div>
         );
     }

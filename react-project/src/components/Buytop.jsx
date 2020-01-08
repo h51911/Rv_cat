@@ -35,7 +35,7 @@ class Buytop extends React.Component {
                         this.state.imgarr.map((item, index) => {
                             return (
                                 <li key={item.imgurl}>
-                                    <img src={item.imgurl} />
+                                    <img src={item.imgurl} alt="" />
                                     <span>{item.title}</span>
                                 </li>
                             )

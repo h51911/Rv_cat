@@ -1,0 +1,46 @@
+.hot_car {
+    width: 100%;
+
+    ul {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        flex-wrap: wrap;
+
+        li {
+            width: 4.6rem;
+            height: 3.946667rem;
+            float: left;
+            margin-top: .4rem;
+            margin-bottom: .133333rem;
+            // background: yellow;
+            // align="center"
+            text-align: center;
+
+            img {
+                width: 3.84rem;
+                height: 2.56rem;
+                // text-align: center;
+                // margin:auto;
+                // display: flex;
+                // justify-content: center;
+            }
+
+            .p1 {
+                width: 4.333333rem;
+                height: .586667rem;
+                margin-top: .213333rem;
+                font-size: .32rem;
+                text-align: center;
+                line-height: .586667rem;
+            }
+
+            .p2 {
+                font-size: .32rem;
+                color: #FF4F53;
+                text-align: center;
+            }
+        }
+    }
+}

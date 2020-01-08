@@ -95,64 +95,66 @@ class Head extends React.Component {
 
     render() {
         return (
-            <WingBlank>
-                {/* <Button onClick={this.showModal('modal1')}><Icon type="up" />basic<Icon type="up" /></Button> */}
+            <div className="kkone">
+                <WingBlank>
+                    {/* <Button onClick={this.showModal('modal1')}><Icon type="up" />basic<Icon type="up" /></Button> */}
 
-                <Modal
-                    visible={this.state.modal1}
-                    transparent
-                    maskClosable={false}
-                    onClose={this.onClose('modal1')}
-                    title="Title"
-                    footer={[{ text: 'Ok', onPress: () => { console.log('ok'); this.onClose('modal1')(); } }]}
-                    wrapProps={{ onTouchStart: this.onWrapTouchStart }}
-                // afterClose={() => { alert('afterClose'); }}
-                >
-                </Modal>
+                    <Modal
+                        visible={this.state.modal1}
+                        transparent
+                        maskClosable={false}
+                        onClose={this.onClose('modal1')}
+                        title="Title"
+                        footer={[{ text: 'Ok', onPress: () => { console.log('ok'); this.onClose('modal1')(); } }]}
+                        wrapProps={{ onTouchStart: this.onWrapTouchStart }}
+                    // afterClose={() => { alert('afterClose'); }}
+                    >
+                    </Modal>
 
-                <div className="nav">
-                    <p className="p_1">
+                    <div className="nav">
+                        <p className="p_1">
 
-                        <span className="span_1 iconfont icon-jiantou2"></span>
-                        <span className="span_2">返回</span>
+                            <span className="span_1 iconfont icon-jiantou2"></span>
+                            <span className="span_2">返回</span>
 
-                    </p>
-                    <div className="p_2">
-                        <span onClick={this.showModal('modal2')}>二手房车</span>
-                        <i className=" i_1 iconfont icon-jiantou-copy-copy"></i>
+                        </p>
+                        <div className="p_2">
+                            <span onClick={this.showModal('modal2')}>二手房车</span>
+                            <i className=" i_1 iconfont icon-jiantou-copy-copy"></i>
+                        </div>
+                        <p className="p_3">首页</p>
                     </div>
-                    <p className="p_3">首页</p>
-                </div>
 
 
-                <Modal
-                    popup
-                    visible={this.state.modal2}
-                    onClose={this.onClose('modal2')}
-                    animationType="slide-up"
-                // afterClose={() => { alert('afterClose'); }}
-                >
-                    <List renderHeader={() => <div></div>} className="popup-list">
-                        <div className="iconList">
-                            {this.state.iconList.map((item) => (
+                    <Modal
+                        popup
+                        visible={this.state.modal2}
+                        onClose={this.onClose('modal2')}
+                        animationType="slide-up"
+                    // afterClose={() => { alert('afterClose'); }}
+                    >
+                        <List renderHeader={() => <div></div>} className="popup-list">
+                            <div className="iconList">
+                                {this.state.iconList.map((item) => (
 
-                                <dl key={item.id}>
-                                    <dt className={item.icon} style={
-                                        {
-                                            color: item.color,
-                                        }
-                                    }></dt>
+                                    <dl key={item.id}>
+                                        <dt className={item.icon} style={
+                                            {
+                                                color: item.color,
+                                            }
+                                        }></dt>
 
-                                    <dd>{item.title}</dd>
-                                </dl>
-                            ))}</div>
+                                        <dd>{item.title}</dd>
+                                    </dl>
+                                ))}</div>
 
-                        <List.Item>
-                            <Button type="primary" onClick={this.onClose('modal2')}>取消</Button>
-                        </List.Item>
-                    </List>
-                </Modal>
-            </WingBlank>
+                            <List.Item>
+                                <Button type="primary" onClick={this.onClose('modal2')}>取消</Button>
+                            </List.Item>
+                        </List>
+                    </Modal>
+                </WingBlank>
+            </div>
         );
     }
 }

@@ -1,4 +1,4 @@
-.nav {
+.kkone .nav {
   width: 100%;
   height: 1.2rem;
   background: #4284d9;
@@ -7,36 +7,36 @@
   align-items: center;
 }
 
-.nav .p_1 {
+.kkone .nav .p_1 {
   padding-left: .2rem;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.nav .p_1 .span_1 {
+.kkone .nav .p_1 .span_1 {
   color: #ffffff;
   font-size: .7rem;
 }
 
-.nav .p_1 .span_2 {
+.kkone .nav .p_1 .span_2 {
   font-size: .48rem;
   color: #ffffff;
   display: inline-block;
 }
 
-.nav .p_2 span {
+.kkone .nav .p_2 span {
   font-size: .48rem;
   color: #ffffff;
 }
 
-.nav .p_2 i {
+.kkone .nav .p_2 i {
   color: #ffffff;
   font-size: .6rem;
   padding-left: .08rem;
 }
 
-.nav .p_3 {
+.kkone .nav .p_3 {
   padding-right: .266667rem;
   color: #ffffff;
   font-size: .48rem;

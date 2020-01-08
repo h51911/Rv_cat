@@ -1,8 +1,18 @@
-import React from 'react';
-class Second extends React.Component {
+import React, { Component } from 'react';
+import '../style/Second.scss'; // 引入外部样式
+// import Head from '../Components/head.jsx'
+import Head from '../components/head.jsx'
+
+class Second extends Component {
+
     render() {
+
         return (
-            <div>Second</div>
+            <>
+                <Head></Head>
+                <div>二手车界面</div>
+            </>
+
         );
     }
 }

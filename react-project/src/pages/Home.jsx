@@ -3,7 +3,9 @@ import "../style/Home.scss";
 import noavatar from "../assets/noavatar_middle.gif";
 import Lunbotu from "../components/Lunbotu.jsx"
 import Buytop from "../components/Buytop.jsx"
-import Pb from "../components/Pb.jsx"
+import Pb from "../components/Pb.jsx";
+import AboutUs from "../components/AboutUs.js";
+
 class Home extends React.Component {
     constructor() {
         super();
@@ -35,7 +37,7 @@ class Home extends React.Component {
                     <div className="line"></div>
                     <Pb />
                 </main>
-
+                <AboutUs>156</AboutUs>
             </div>
         );
     }

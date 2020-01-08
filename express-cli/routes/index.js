@@ -11,6 +11,8 @@ router.get('/', function (req, res, next) {
 router.get('/home', async (req, res, next) => {
   res.append('Access-Control-Allow-Origin', '*');
   let data = await find('home');
+  // console.log(156);
+
   res.json(data);
 });
 module.exports = router;

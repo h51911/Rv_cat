@@ -1,7 +1,7 @@
 import React from "react";
 import {Route,Switch,withRouter,Redirect} from 'react-router-dom'
 /* 样式 */
-import "../style/Choose.scss";
+import "../style/choose.scss";
 
 /* antd */
 import { Tabs, WhiteSpace } from "antd-mobile";

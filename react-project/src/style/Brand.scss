@@ -1,8 +1,12 @@
+a {
+    text-decoration: none;
+}
+
 .brand {
     position: relative;
     background: red;
 
-    /* 导航-字母 */
+    /* 右边导航 */
     .nav {
         position: fixed;
         right: .266667rem;
@@ -26,6 +30,222 @@
                     display: block;
                 }
             }
+        }
+    }
+
+    /* 主要内容 */
+    .container {
+
+        /* 热门推荐 */
+        .hot_sale {
+
+            /* 热门推荐-标题 */
+            .recomend_title {
+                width: 100%;
+                height: .88rem;
+                line-height: .88rem;
+                background: rgb(245, 245, 245);
+
+                span {
+                    padding: 0 .4rem;
+                    color: #828282;
+                    font-size: .373333rem;
+                }
+            }
+
+            .price {
+                width: 9.6rem;
+                padding-left: .4rem;
+                margin-top: 16px;
+                margin-bottom: .373333rem;
+
+                ul {
+                    width: 9.6rem;
+                    height: .986667rem;
+
+                    li {
+                        width: 2rem;
+                        height: .986667rem;
+                        padding-right: .4rem;
+                        float: left;
+
+                        a {
+                            display: block;
+                            width: 1.946667rem;
+                            height: .933333rem;
+                            border: .026667rem solid #ccc;
+                            text-align: center;
+                            line-height: .933333rem;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .brand_hot {
+                width: 100%;
+                height: 1.52rem;
+
+                ul {
+                    width: 100%;
+                    height: 1.52rem;
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        width: 2rem;
+                        height: 1.306667rem;
+                        padding: .106667rem 0;
+                        text-align: center;
+
+                        a {
+                            text-align: center;
+                            width: 2rem;
+                            height: 1.28rem;
+                            text-decoration: none;
+
+                            img {
+                                width: 1.066667rem;
+                                height: .72rem;
+                            }
+
+                            p {
+                                width: 2rem;
+                                height: .586667rem;
+                                line-height: .586667rem;
+                                text-align: center;
+                                font-size: .373333rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hot_car {
+                ul {
+                    width: 100%;
+                    // height: 1.52rem;
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        // width: 2rem;
+                        // height: 1.306667rem;
+                        // padding: .106667rem 0;
+                        width: 2.393333rem;
+                        height: 1.706667rem;
+                        text-align: center;
+                        margin-top: .16rem;
+                        margin-bottom: .4rem;
+
+                        a {
+                            // text-align: center;
+                            // width: 2rem;
+                            // height: 1.28rem;
+                            width: 2.393333rem;
+                            height: 1.706667rem;
+                            text-decoration: none;
+                            font-size: .373333rem;
+
+                            img {
+                                // width: 1.066667rem;
+                                // height: .72rem;
+                                width: 1.733333rem;
+                                height: 1.146667rem;
+                            }
+
+                            p {
+                                width: 2rem;
+                                height: .586667rem;
+                                line-height: .586667rem;
+                                text-align: center;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        /* ABCD */
+        .boxcar {
+            width: 100%;
+
+            .list {
+                width: 100%;
+
+                /* 标题 */
+                .car_title {
+                    width: 100%;
+                    height: .88rem;
+                    background: rgb(245, 245, 245);
+                    line-height: .88rem;
+
+                    span {
+                        padding: 0 .4rem;
+                        font-size: .373333rem;
+                    }
+                }
+
+                /* 内容 */
+                .car_all {
+                    width: 9.2rem;
+
+                    ul {
+                        li {
+                            width: 9.2rem;
+                            height: 1.066667rem;
+
+                            border-bottom: .026667rem solid #ccc;
+                            padding: .266667rem .4rem;
+
+                            a {
+                                text-decoration: none;
+
+                                img {
+                                    width: 1.066667rem;
+                                    height: .72rem;
+                                    margin-top: .16rem;
+                                    margin-right: .4rem;
+                                }
+
+                                span {
+                                    display: inline-block;
+                                    height: 1.066667rem;
+                                    line-height: 1.066667rem;
+                                    font-size: .373333rem;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+    /* 提示 */
+    .click_tips {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        width: 1.333333rem;
+        height: 1.333333rem;
+        border: .026667rem solid  #4284d9;
+        text-align: center;
+        line-height: 1.333333rem;
+        border-radius: 50%;
+
+
+        span {
+            font-size: .8rem;
+            color: #4284d9;
         }
     }
 }

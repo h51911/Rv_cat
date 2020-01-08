@@ -20,6 +20,13 @@
       "unicode_decimal": 58900
     },
     {
+      "icon_id": "538490",
+      "name": "加载",
+      "font_class": "jiazai",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
       "icon_id": "599957",
       "name": "我的",
       "font_class": "wode",
@@ -53,6 +60,13 @@
       "font_class": "shouye",
       "unicode": "e634",
       "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "2076319",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e8a3",
+      "unicode_decimal": 59555
     },
     {
       "icon_id": "2078817",

@@ -20,6 +20,20 @@
       "unicode_decimal": 58934
     },
     {
+      "icon_id": "810221",
+      "name": "箭头",
+      "font_class": "jiantou-copy-copy",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "1110404",
+      "name": "箭头 左 小",
+      "font_class": "jiantou2",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "5427697",
       "name": "微信",
       "font_class": "weixin",
@@ -74,6 +88,13 @@
       "font_class": "pengyouquan",
       "unicode": "e668",
       "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "10707234",
+      "name": "箭头 下 down",
+      "font_class": "jiantouxia",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
     }
   ]
 }

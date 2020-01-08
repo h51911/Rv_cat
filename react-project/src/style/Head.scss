@@ -7,15 +7,15 @@
     align-items: center;
 
     .p_1 {
-        padding-left: .266667rem;
+        padding-left: .2rem;
         height: 100%;
         display: flex;
         align-items: center;
 
         .span_1 {
             color: #ffffff;
-            font-size: .5rem;
-            padding-right: .053333rem;
+            font-size: .7rem;
+            // padding-right: .053333rem;
         }
 
         .span_2 {
@@ -36,7 +36,7 @@
 
         i {
             color: #ffffff;
-            font-size: .54rem;
+            font-size: .6rem;
             padding-left: .08rem;
         }
 
@@ -46,5 +46,47 @@
         padding-right: .266667rem;
         color: #ffffff;
         font-size: .48rem;
+    }
+}
+
+// .popup-list .am-list-body {
+//     height: 310px;
+//     overflow: auto;
+// }
+
+
+.am-wingblank .am-wingblank-lg {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.am-wingblank {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+// 引入字体图标
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.iconList {
+    display: flex;
+    flex-wrap: wrap;
+
+    dl {
+        // border: 1px solid red;
+        width: 2.346667rem;
+        height: 1.92rem;
+
+        dt {
+          font-size: .8rem;
+        }
+
+       
     }
 }

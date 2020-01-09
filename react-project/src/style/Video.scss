@@ -1,0 +1,167 @@
+.video {
+    .video-nav {
+        height: 1.12rem;
+        line-height: 1.12rem;
+        font-size: .426667rem;
+        background-color: #fff;
+
+        li {
+            margin: 0 .32rem;
+            color: #444;
+        }
+    }
+
+    .line {
+        height: .266667rem;
+        background-color: #F2F7FC;
+    }
+
+    .page {
+        position: relative;
+        text-align: center;
+        margin: .533333rem .266667rem;
+        display: flex;
+        justify-content: center;
+
+        .page-select {
+            width: 2.666667rem;
+            height: .826667rem;
+            position: relative;
+
+            i {
+                position: absolute;
+                right: 0;
+                top: .02667rem;
+                height: .846667rem;
+                line-height: .866667rem;
+                width: .593333rem;
+                background-color: #E5E5E5;
+                border-left: .026667rem solid #D7D7D7;
+                border-top-right-radius: .133333rem;
+                border-bottom-right-radius: .133333rem;
+
+                .sanjiaoxing {
+                    background-color: #E5E5E5;
+                    font-size: .32rem;
+                    color: rgb(197, 197, 197);
+                }
+            }
+
+            select {
+                box-sizing: border-box;
+                padding-left: .566667rem;
+                color: #4284d9;
+                border-radius: .133333rem;
+                // text-align: center;
+                /*隐藏默认小箭头*/
+                appearance: none;
+                // text-align-last: center;
+                border: .026667rem solid #D7D7D7;
+                height: .87667rem;
+                width: 2.666667rem;
+                font-family: inherit;
+                font-size: .373333rem;
+                position: relative;
+
+                option {
+                    text-align: center;
+                    line-height: .826667rem;
+                }
+            }
+        }
+
+
+        .pa {
+            margin: 0 .08rem;
+            color: #4284d9;
+            border: .026667rem solid #D7D7D7;
+            border-radius: .133333rem;
+            height: .826667rem;
+            background: #FFF;
+            width: 1.653333rem;
+            line-height: .826667rem;
+            text-align: center;
+            font-size: .373333rem;
+        }
+    }
+
+    .footer {
+        height: 1.28rem
+    }
+
+    main {
+        background-color: #fff;
+        padding: 0 .4rem;
+
+        h3 {
+            font-size: .586667rem;
+            color: #4284d9;
+            font-weight: 700;
+            height: 1.386667rem;
+            line-height: 1.386667rem;
+
+        }
+
+        ul {
+            li {
+                width: 4.453333rem;
+                margin-bottom: .4rem;
+
+                .d-img {
+                    width: 4.453333rem;
+                    position: relative;
+
+                    img {
+                        width: 4.453333rem;
+                    }
+
+                    .bofang {
+                        color: #fff;
+                        font-size: .693333rem;
+                        position: absolute;
+                        left: .133333rem;
+                        bottom: .133333rem;
+                    }
+                }
+
+                p {
+                    font-size: .373333rem;
+                    line-height: .533333rem;
+                    margin: .24rem 0 0;
+                    width: 4.453333rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    color: #444;
+                }
+
+                .bottom {
+                    font-size: .32rem;
+                    color: #B7B7B7;
+                    display: block;
+                    margin: .213333rem 0 0;
+                    height: .48rem;
+                    overflow: hidden;
+
+                    .bofang {
+                        font-size: .4rem;
+                    }
+
+                    .dkw_xiaoxi {
+                        font-size: .4rem;
+                    }
+
+                    i {
+                        margin-right: .4rem;
+                    }
+                }
+            }
+
+            li:nth-child(2n-1) {
+                margin-right: .266667rem;
+            }
+        }
+    }
+}

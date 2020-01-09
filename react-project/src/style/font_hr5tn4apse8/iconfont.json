@@ -111,6 +111,13 @@
       "unicode_decimal": 59322
     },
     {
+      "icon_id": "6270980",
+      "name": "三角形",
+      "font_class": "sanjiaoxing",
+      "unicode": "e6bd",
+      "unicode_decimal": 59069
+    },
+    {
       "icon_id": "7817220",
       "name": "购物车",
       "font_class": "gouwuche1",

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 class Pb extends React.Component {
     constructor() {
         super();
@@ -13,13 +14,15 @@ class Pb extends React.Component {
         this.yidong = this.yidong.bind(this);
     }
     myactive(item) {
+        if (item == '视频') {
+            this.props.history.push('/video/1');
+        }
         this.setState({
             active: item
         });
     }
     async componentDidMount() {
         let { data } = await axios.get('http://localhost:3001/home');
-        console.log(data);
         this.setState({
             data
         });
@@ -48,6 +51,7 @@ class Pb extends React.Component {
         console.log(ev);
     }
     render() {
+        window.scrollTo(0, 0);
         return (
             <>
                 <div className="pb">
@@ -463,4 +467,5 @@ class Pb extends React.Component {
         );
     }
 }
+Pb = withRouter(Pb);
 export default Pb

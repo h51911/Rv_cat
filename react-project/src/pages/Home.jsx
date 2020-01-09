@@ -37,7 +37,7 @@ class Home extends React.Component {
                     <div className="line"></div>
                     <Pb />
                 </main>
-                <AboutUs>156</AboutUs>
+                <AboutUs></AboutUs>
             </div>
         );
     }

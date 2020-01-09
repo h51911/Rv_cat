@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import '../style/Second.scss'; // 引入外部样式
+import { Route, Switch, Redirect } from 'react-router-dom'
 // import Head from '../Components/head.jsx'
 import Head from '../components/head.jsx'
+
+
+// 引入切换组件组件
+import All from '../style/second/All.jsx'
+import Buy from '../style/second/Buy.jsx'
+import Sell from '../style/second/Sell.jsx'
+import Sold from '../style/second/Sold.jsx'
 
 class Second extends Component {
 
@@ -29,11 +37,21 @@ class Second extends Component {
                     title: "已售",
                     path: "/sold"
                 }
-            ]
+            ],
+            current: "/all"
         }
 
     }
+    // 切换组件
+    changeList = (path) => {
+        console.log(path)
+        this.setState({
+            current: path
+        })
+        this.props.history.push('/second' + path);
+    }
     render() {
+        let { topList, current } = this.state;
         return (
             <>
                 <Head></Head>
@@ -67,7 +85,36 @@ class Second extends Component {
                         </div>
                     </div>
                 </div>
+                <div className="list_q">
+                    {/* <span className="list_w">
+                        全部
+                    </span> */}
+                    {
+                        topList.map(item => {
+                            // console.log(this.path)
+                            return (
 
+                                // item.path == current ? 'list_w' : 'list_e'
+                                <span className={item.path == current ? 'list_e' : 'list_w'}
+                                    key={item.id}
+                                    onClick={this.changeList.bind(this, item.path)}
+                                >
+                                    {item.title}
+                                </span>
+                            )
+                        })
+                    }
+                </div>
+                <div>123</div>
+
+
+                <Switch>
+                    <Route path="/second/all" component={All} ></Route>
+                    <Route path='/second/buy' component={Buy}></Route>
+                    <Route path='/second/sell' component={Sell}></Route>
+                    <Route path='/second/sold' component={Sold}></Route>
+                    {/* <Redirect from='/second' to="/second/all" exact /> */}
+                </Switch>
 
             </>
 

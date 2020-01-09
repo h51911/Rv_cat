@@ -102,3 +102,30 @@
         }
     }
 }
+
+.list_q {
+    height: 1.2rem;
+    background: #ffffff;
+    // border: 1px solid red;
+
+    .list_w {
+        display: inline-block;
+        width: 1.5rem;
+        text-align: center;
+        line-height: 1.2rem;
+        font-size: .44rem;
+        // border: 1px solid red;
+    }
+
+    .list_e {
+        display: inline-block;
+        width: 1.5rem;
+        text-align: center;
+        line-height: 1.2rem;
+        font-size: .44rem;
+        color: royalblue;
+        font-weight: bold;
+        border-bottom: .08rem solid royalblue !important;
+        background: #f7f7f7;
+    }
+}

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import "../../style/pageAll.scss";
 class ZongShu extends Component {
   render() {
-    let {data} =this.props
+    let { data } = this.props;
     console.log(this.props);
 
     return (
@@ -11,11 +11,7 @@ class ZongShu extends Component {
         <div className="top">
           <div className="show">
             <div className="left">
-              <img
-                className="img1"
-                src={data[0]}
-                alt=""
-              />
+              <img className="img1" src={data[0]} alt="" />
               <span>外观</span>
             </div>
             <div className="right">
@@ -41,17 +37,14 @@ class ZongShu extends Component {
           <div className="consult">
             <div className="img">
               <a href="">
-                <img
-                  src="https://www.rv28.com/data/attachment/portal/201903/25/094647qlov7slz7x0lzmtx.jpg.thumb.jpg"
-                  alt=""
-                />
+                <img src={data[0]} alt="" />
               </a>
             </div>
 
             <div className="price">
-              <p>五十铃KV100房车</p>
+              <p>{data[1]}</p>
               <p>
-                报价：<strong>100万</strong>
+                报价：<strong>{data[2]}</strong>
               </p>
             </div>
             <div className="final_price">

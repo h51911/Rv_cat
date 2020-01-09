@@ -1,0 +1,146 @@
+.list_total {
+    position: relative;
+
+    .title {
+        position: relative;
+        width: 100%;
+        height: 1.866667rem;
+        background: white;
+
+        .logo {
+            float: left;
+
+            img {
+                width: 1.573333rem;
+                height: 1.066667rem;
+                margin-top: .373333rem;
+                padding: 0 .266667rem;
+            }
+
+        }
+
+        .brand-name {
+            float: left;
+            display: inline-block;
+            width: 2.24rem;
+            height: 1.866667rem;
+            // background: yellow;
+            line-height: 1.866667rem;
+            text-align: center;
+            font-size: .373333rem;
+        }
+
+        .share {
+            width: .8rem;
+            height: 1.066667rem;
+            display: flex;
+            flex-direction: column;
+            font-size: .373333rem;
+            position: absolute;
+            right: .266667rem;
+            top: .426667rem;
+            text-align: center;
+
+            // svg {
+            //     display: block;
+            //     width: .8rem;
+            //     height: .8rem;
+            //     span{
+            //         display: block;
+            //         width: .8rem;
+            //         height: .8rem;
+            //     }
+            // }
+            .icon-fenxiang {
+                font-size: .373333rem;
+            }
+        }
+    }
+
+    .list_nav {
+        ul {
+            display: flex;
+
+            .d1,
+            li {
+                width: 2.5rem;
+                height: 1.066667rem;
+                line-height: 1.066667rem;
+                text-align: center;
+                font-size: .373333rem;
+                border-bottom: .053333rem solid white;
+            }
+
+            .active {
+                border-color: #4284d9;
+                color: #4284d9;
+            }
+        }
+    }
+
+
+}
+
+.clickToShare {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // background: yellow;
+    background: rgba(#666, 0.5);
+
+    .toShare {
+        width: 100%;
+        height: 8rem;
+        background: white;
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+
+    }
+}
+
+/* 车型 */
+.list_car {
+    ul {
+        li {
+            width: 9.466667rem;
+            height: 1.6rem;
+            padding: 0 .266667rem .373333rem .266667rem;
+            margin-top: .4rem;
+            border-bottom: .026667rem solid #E9E9E9;
+
+            a {
+                display: block;
+                width: 9.466667rem;
+                height: 1.6rem;
+                font-size: .4rem;
+                text-decoration: none;
+                color: black;
+
+                img {
+                    width: 2.4rem;
+                    height: 1.6rem;
+                    margin-right: .266667rem;
+                    float: left;
+                }
+
+                h4 {
+                    width: 6.8rem;
+                    height: .48rem;
+                    padding-top: .266667rem;
+                    padding-bottom: .213333rem;
+                    float: left;
+
+                }
+
+                p {
+                    strong {
+                        color: #f60;
+                    }
+                }
+            }
+        }
+    }
+}

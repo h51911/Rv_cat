@@ -15,6 +15,12 @@ router.get("/brand", async function(req, res, next) {
   res.send(data);
 });
 
+router.get("/brand/:id", async function(req, res, next) {
+  res.append("Access-Control-Allow-Origin", "*");
+  let data = await find("brand");
+  res.send(data);
+});
+
 /* condition */
 router.get("/condition", async function(req, res, next) {
   res.append("Access-Control-Allow-Origin", "*");

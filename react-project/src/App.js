@@ -15,7 +15,7 @@ import Mine from "./pages/Mine.jsx";
 import "./style/font_hr5tn4apse8/iconfont.css";
 import { TabBar } from "antd-mobile";
 import DetailPage from "./components/DetailPage";
-
+import List from "./components/List";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +29,7 @@ class App extends React.Component {
           <Route path="/second" component={Second} />
           <Route path="/mine" component={Mine} />
           <Route path="/detailpage" component={DetailPage} />
+          <Route path="/list" component={List} />
 
           <Route path="/notfound" render={() => <h1>你访问的页面不存在</h1>} />
           {/* "/" 跳转到 "/home" */}

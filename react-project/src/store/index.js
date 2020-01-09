@@ -2,7 +2,8 @@
 import { createStore } from "redux";
 //state数据
 const initstate = {
-  data: []
+  data: [],
+  list: []
 };
 //reducer函数，用于指定state修改逻辑，
 const reducer = (state = initstate, action) => {
@@ -13,6 +14,12 @@ const reducer = (state = initstate, action) => {
         //将值覆盖到state
         ...state, //把这个解构出来也会有cartlist，但是下面的cartlist会覆盖上面的
         data: action.payload
+      };
+    case "list":
+      return {
+        //将值覆盖到state
+        ...state, //把这个解构出来也会有cartlist，但是下面的cartlist会覆盖上面的
+        list: action.payload
       };
     default:
       return state;

@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import AboutUs from "../components/AboutUs";
+import { connect } from "react-redux";
 import axios from "axios";
 import "../style/Brand.scss";
+
+// /* 列表 */
+// import List from "./List";
+
 class Brand extends Component {
   state = {
     navData: [
@@ -92,14 +97,25 @@ class Brand extends Component {
     }, 1000);
     // console.log(item);
 
-    console.log(this.refs, index);
+    // console.log(this.refs, index);
   };
 
   /* 跳转列表 */
-  toList(index, idx) {
+  toList(data) {
+    let {img,title,id} = data;
     // console.log(title);
     // console.log(this.refs.outer);
-    console.log(index, idx);
+    /* index 大分类          idx小分类*/
+    // console.log(index, idx);
+    // let { div } = this.refs;
+    // console.log(this.refs);
+    this.props.dispatch({
+     type: "list",
+      payload: [img, title, id]
+    });
+
+    this.props.history.push("/list");
+    console.log(data);
   }
 
   async componentDidMount() {
@@ -116,8 +132,8 @@ class Brand extends Component {
 
   /* 滚动 */
   handleScroll(index) {
-    console.log(window.scrollY, index);
-    console.log("this.refs", this.refs);
+    console.log(window.scrollY);
+    // console.log("this.refs", this.refs);
   }
 
   render() {
@@ -133,7 +149,6 @@ class Brand extends Component {
     // console.log("navData", navData);
     // console.log("data", data);
     return (
-      // <React.Fragment >
       <div className="brand" style={{ background: "white" }}>
         {/* <div>Brand</div> */}
         {/* 右边导航 */}
@@ -158,7 +173,7 @@ class Brand extends Component {
               <span>热门推荐</span>
             </div>
 
-            {/* --------------------------- */}
+            {/* ----------- */}
             <div className="price">
               <ul>
                 {recommendprice.map(item => {
@@ -211,7 +226,6 @@ class Brand extends Component {
                   <div
                     className="car_title"
                     onChange={this.handleScroll.bind(this, index)}
-                    
                     ref="abc"
                   >
                     <span>{item.title}</span>
@@ -224,8 +238,12 @@ class Brand extends Component {
                         return (
                           <li
                             key={ele.title}
-                            onClick={this.toList.bind(this, index, idx)}
-                            ref="title"
+                            // onClick={this.toList.bind(this, index, idx)}
+                            onClick={this.toList.bind(
+                              this,
+                              ele
+                            )}
+                            ref="item"
                           >
                             <a>
                               <img src={ele.img} alt="" />
@@ -246,12 +264,16 @@ class Brand extends Component {
         <div className="click_tips" style={{ display: isok }}>
           <span>{key}</span>
         </div>
+        {/* <List></List>/ */}
+        {/* 关于我们 */}
         <AboutUs></AboutUs>
       </div>
-      //{" "}
-      // </React.Fragment>
     );
   }
 }
-
+const mapStateToProps = state => ({
+  //这里的形参state是仓库的state
+  data: state.data
+});
+Brand = connect(mapStateToProps)(Brand);
 export default Brand;

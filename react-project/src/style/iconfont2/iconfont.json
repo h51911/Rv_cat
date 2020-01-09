@@ -1,0 +1,23 @@
+{
+  "id": "1605076",
+  "name": "房车猫",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2165181",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "10140597",
+      "name": "QQ",
+      "font_class": "QQ",
+      "unicode": "e792",
+      "unicode_decimal": 59282
+    }
+  ]
+}

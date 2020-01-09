@@ -10,7 +10,11 @@ class Second extends Component {
         return (
             <>
                 <Head></Head>
-                <div>二手车界面</div>
+                <div className="re">
+                    <div className="img">
+                        <span>123</span>
+                    </div>
+                </div>
             </>
 
         );

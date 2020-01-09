@@ -134,6 +134,7 @@
 .plate {
     height: .853333rem;
     margin-top: .266667rem;
+    margin-bottom: .266667rem;
     background: #ffffff;
     // border: 1px solid red;
     display: flex;
@@ -149,5 +150,55 @@
         font-size: .393333rem;
 
 
+    }
+}
+
+.oneList {
+    background: #ffffff;
+    margin-bottom: .133333rem;
+    ;
+
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+
+        .car-img {
+            img {
+                width: 3.2rem;
+                height: 2.133333rem;
+                display: block;
+            }
+        }
+
+        .car-list {
+            width: 6.4rem;
+            height: 2.133333rem;
+            // border: 1px solid red;
+            margin-right: .1rem;
+
+            h3 {
+                font-size: .426667rem;
+                color: #495056;
+                margin-bottom: .133333rem;
+            }
+
+            .ar-km {
+                .z {
+                    display: block;
+                    color: #999999;
+                    margin-bottom: .133333rem;
+                }
+
+                .car-title {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .y {
+                        font-size: .453333rem;
+                        color: #f56539;
+                    }
+                }
+            }
+        }
     }
 }

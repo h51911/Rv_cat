@@ -6,6 +6,8 @@ import Choose from './pages/Choose.jsx';
 import Second from './pages/Second.jsx';
 import Mine from './pages/Mine.jsx';
 import Video from './pages/Video.jsx';
+import VideoXiang from './pages/VideoXiang.jsx';
+
 import './style/font_hr5tn4apse8/iconfont.css';
 import { TabBar } from 'antd-mobile';
 
@@ -21,7 +23,9 @@ class App extends React.Component {
           <Route path='/choose' component={Choose} />
           <Route path='/second' component={Second} />
           <Route path='/mine' component={Mine} />
-          <Route path='/video/:page' component={Video} />
+          <Route path='/video' component={Video} exact />
+          {/*嵌套路由*/}
+          <Route path='/video/xiang/:id' component={VideoXiang} />
           <Route path='/notfound' render={() => <h1>你访问的页面不存在</h1>} />
           {/* "/" 跳转到 "/home" */}
           <Redirect from="/" to="/home" exact />

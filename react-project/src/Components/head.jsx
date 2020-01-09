@@ -3,7 +3,7 @@
 
 import React from "react";
 import '../style/Head.scss'
-
+import { withRouter } from 'react-router-dom';
 //引入字体图标
 // import '../assets/iconfont/iconfont.css'
 
@@ -69,6 +69,8 @@ class Head extends React.Component {
                 },
             ]
         };
+        this.shouye = this.shouye.bind(this);
+        this.goback = this.goback.bind(this);
     }
     showModal = key => (e) => {
         e.preventDefault(); // 修复 Android 上点击穿透
@@ -93,6 +95,13 @@ class Head extends React.Component {
         }
     }
 
+    shouye() {
+        this.props.history.push('/home');
+    }
+    goback() {
+        this.props.history.goBack();
+    }
+
     render() {
         return (
             <div className="kkone">
@@ -112,17 +121,17 @@ class Head extends React.Component {
                     </Modal>
 
                     <div className="nav">
-                        <p className="p_1">
+                        <p className="p_1" onClick={this.goback}>
 
                             <span className="span_1 iconfont icon-jiantou2"></span>
                             <span className="span_2">返回</span>
 
                         </p>
                         <div className="p_2">
-                            <span onClick={this.showModal('modal2')}>二手房车</span>
+                            <span onClick={this.showModal('modal2')}>{this.props.children}</span>
                             <i className=" i_1 iconfont icon-jiantou-copy-copy"></i>
                         </div>
-                        <p className="p_3">首页</p>
+                        <p className="p_3" onClick={this.shouye}>首页</p>
                     </div>
 
 
@@ -160,5 +169,5 @@ class Head extends React.Component {
 }
 
 
-
+Head = withRouter(Head);
 export default Head;

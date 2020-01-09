@@ -15,7 +15,7 @@ class Pb extends React.Component {
     }
     myactive(item) {
         if (item == '视频') {
-            this.props.history.push('/video/1');
+            this.props.history.push('/video');
         }
         this.setState({
             active: item

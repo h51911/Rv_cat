@@ -1,14 +1,16 @@
 import React from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 class VideoList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             datas: [],
             data: [],
+            page: 1
         }
-        console.log(this.props.page);
-        this.props.onRef(this)
+        //this.props.onRef是父组件传下来的方法，
+        this.props.onRef(this)//这里是调用父组件的方法，并且将子组件的实例传到父组件中
         this.xiangqing = this.xiangqing.bind(this);
         this.chao = this.chao.bind(this);
     }
@@ -16,13 +18,12 @@ class VideoList extends React.Component {
         let shu = 12 * this.props.page;
         let { data } = await axios.get('http://localhost:3001/video');
         this.setState({
-            // datas: data,
+            datas: data,
             data: data.slice(shu - 12, shu)
         });
-        // console.log(this.props.page);
     }
     xiangqing(vid) {
-        console.log(vid);
+        this.props.history.push(`/video/xiang/${vid}`);
     }
     chao(page) {
         let shuX = 12 * page;
@@ -32,8 +33,7 @@ class VideoList extends React.Component {
         });
     }
     render() {
-        // window.scrollTo(0, 0);
-        // console.log("zi");
+        window.scrollTo(0, 0);
         return (
             <>
                 <main>
@@ -66,4 +66,5 @@ class VideoList extends React.Component {
         );
     }
 }
+VideoList = withRouter(VideoList);
 export default VideoList;

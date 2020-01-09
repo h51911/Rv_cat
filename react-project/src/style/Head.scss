@@ -20,7 +20,7 @@
             }
 
             .span_2 {
-                font-size: .48rem;
+                font-size: .426667rem;
                 color: #ffffff;
                 display: inline-block;
 
@@ -31,13 +31,14 @@
 
         .p_2 {
             span {
-                font-size: .48rem;
+                font-size: .533333rem;
                 color: #ffffff;
             }
 
             i {
                 color: #ffffff;
-                font-size: .6rem;
+                font-size: .42rem;
+                font-weight: normal;
                 padding-left: .08rem;
             }
 
@@ -46,7 +47,7 @@
         .p_3 {
             padding-right: .266667rem;
             color: #ffffff;
-            font-size: .48rem;
+            font-size: .426667rem;
         }
     }
 
@@ -97,6 +98,10 @@
 
         dt {
             font-size: .8rem;
+        }
+
+        dd {
+            font-size: .346667rem;
         }
 
 

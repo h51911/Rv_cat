@@ -128,4 +128,26 @@
         border-bottom: .08rem solid royalblue !important;
         background: #f7f7f7;
     }
+
+}
+
+.plate {
+    height: .853333rem;
+    margin-top: .266667rem;
+    background: #ffffff;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+
+    i {
+        color: red;
+        font-size: .8rem;
+    }
+
+    span {
+        display: inline-block;
+        font-size: .393333rem;
+
+
+    }
 }

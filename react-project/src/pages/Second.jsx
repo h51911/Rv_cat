@@ -11,6 +11,9 @@ import Buy from '../style/second/Buy.jsx'
 import Sell from '../style/second/Sell.jsx'
 import Sold from '../style/second/Sold.jsx'
 
+// 引入地步组件
+import AboutUs from '../components/AboutUs';
+import '../style/AboutUs.scss'
 class Second extends Component {
 
     constructor(props) {
@@ -105,7 +108,10 @@ class Second extends Component {
                         })
                     }
                 </div>
-                <div>123</div>
+                <div className="plate">
+                    <i className="iconfont icon-quxiaozhiding"></i>
+                    <span>房车之家二手房车板块管理条例</span>
+                </div>
 
 
                 <Switch>
@@ -115,7 +121,7 @@ class Second extends Component {
                     <Route path='/second/sold' component={Sold}></Route>
                     {/* <Redirect from='/second' to="/second/all" exact /> */}
                 </Switch>
-
+                <AboutUs></AboutUs>
             </>
 
         );

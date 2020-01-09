@@ -29,10 +29,56 @@ class Brand extends Component {
     ],
     key: "",
     isok: "none",
-    data: []
+    data: [],
+    recommend: [
+      {
+        img: "https://www.rv28.com/rv28/images/brand/xinfei.jpg",
+        title: "新飞"
+      },
+      {
+        img: "https://www.rv28.com/rv28/images/brand/lzone.jpg",
+        title: "览众"
+      },
+      {
+        img: "https://www.rv28.com/rv28/images/brand/newstarrv.jpg",
+        title: "新星"
+      },
+      {
+        img: "https://www.rv28.com/rv28/images/brand/klenrv.jpg",
+        title: "宇通"
+      },
+      {
+        img: "https://www.rv28.com/rv28/images/brand/fenghuang.jpg",
+        title: "凤凰"
+      }
+    ],
+    recommendcar: [
+      {
+        img:
+          "https://www.rv28.com/data/attachment/portal/201807/28/212030yvhqebuo4jyhhvgz.jpg.thumb.jpg",
+        title: "览众C4"
+      },
+      {
+        img:
+          "https://www.rv28.com/data/attachment/portal/201911/10/184406gdc6peco3rfomcr6.jpg.thumb.jpg",
+        title: "新星T600"
+      },
+      {
+        img:
+          "https://www.rv28.com/data/attachment/portal/201807/28/215304uf83e5jknkcfh887.jpg.thumb.jpg",
+        title: "凤凰瑞阳"
+      },
+      {
+        img:
+          "https://www.rv28.com/data/attachment/portal/201912/10/221440wglae7p55gv65o20.jpg.thumb.jpg",
+        title: "新飞祥菱"
+      }
+    ],
+    recommendprice: ["10-30万", "30-50万", "自行C型", "自行B型"]
   };
 
-  changeNav = item => {
+  /* 字母导航 */
+  changeNav = (item, index) => {
     // console.log(item);
     this.setState({
       key: item,
@@ -44,8 +90,17 @@ class Brand extends Component {
         isok: "none"
       });
     }, 1000);
-    console.log(item);
+    // console.log(item);
+
+    console.log(this.refs, index);
   };
+
+  /* 跳转列表 */
+  toList(index, idx) {
+    // console.log(title);
+    // console.log(this.refs.outer);
+    console.log(index, idx);
+  }
 
   async componentDidMount() {
     /*发送请求 */
@@ -60,12 +115,21 @@ class Brand extends Component {
   }
 
   /* 滚动 */
-  handleScroll(title) {
-    console.log(window.scrollY, title);
+  handleScroll(index) {
+    console.log(window.scrollY, index);
+    console.log("this.refs", this.refs);
   }
 
   render() {
-    let { navData, key, isok, data } = this.state;
+    let {
+      navData,
+      key,
+      isok,
+      data,
+      recommend,
+      recommendcar,
+      recommendprice
+    } = this.state;
     // console.log("navData", navData);
     // console.log("data", data);
     return (
@@ -75,7 +139,7 @@ class Brand extends Component {
         {/* 右边导航 */}
         <div className="nav">
           <ul>
-            {navData.map(item => {
+            {navData.map((item, index) => {
               return (
                 <li key={item} onClick={this.changeNav.bind(this, item)}>
                   <a>{item}</a>
@@ -87,7 +151,7 @@ class Brand extends Component {
 
         {/* 主要内容 */}
         <div className="container">
-          {/* 热门推荐 */}
+          {/* 热门推荐>>>>>>>>>>>>> */}
           <div className="hot_sale">
             {/* -------- 热门推荐-标题 --------- */}
             <div className="recomend_title">
@@ -97,120 +161,58 @@ class Brand extends Component {
             {/* --------------------------- */}
             <div className="price">
               <ul>
-                <li>
-                  <a>10-30万</a>
-                </li>
-                <li>
-                  <a>10-30万</a>
-                </li>
-                <li>
-                  <a>10-30万</a>
-                </li>
-                <li>
-                  <a>10-30万</a>
-                </li>
+                {recommendprice.map(item => {
+                  return (
+                    <li key={item}>
+                      <a>{item}</a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
+            {/* ----------- */}
             <div className="brand_hot">
               <ul>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
+                {recommend.map(item => {
+                  return (
+                    <li key={item.title}>
+                      <a>
+                        <img src={item.img} alt="" />
+                        <p>{item.title}</p>
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
+            {/* ------------ */}
             <div className="hot_car">
               <ul>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <img
-                      src="https://www.rv28.com/rv28/images/brand/xinfei.jpg"
-                      alt=""
-                    />
-                    <p>新飞</p>
-                  </a>
-                </li>
+                {recommendcar.map(item => {
+                  return (
+                    <li key={item.title}>
+                      <a>
+                        <img src={item.img} alt="" />
+                        <p>{item.title}</p>
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
 
           {/* ABCD >>>>>>>>>>>>>>>>>>>>》》》》》》》*/}
           <div className="boxcar">
-            {data.map(item => {
+            {data.map((item, index) => {
               return (
                 <div className="list" key={item.title}>
                   {/* -----标题------- */}
                   <div
                     className="car_title"
-                    onChange={this.handleScroll.bind(this, item.title)}
+                    onChange={this.handleScroll.bind(this, index)}
+                    
+                    ref="abc"
                   >
                     <span>{item.title}</span>
                   </div>
@@ -218,9 +220,13 @@ class Brand extends Component {
                   {/* -----内容----- */}
                   <div className="car_all">
                     <ul>
-                      {item.item.map(ele => {
+                      {item.item.map((ele, idx) => {
                         return (
-                          <li key={ele.title}>
+                          <li
+                            key={ele.title}
+                            onClick={this.toList.bind(this, index, idx)}
+                            ref="title"
+                          >
                             <a>
                               <img src={ele.img} alt="" />
                               <span>{ele.title}</span>

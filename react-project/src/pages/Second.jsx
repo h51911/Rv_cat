@@ -64,7 +64,7 @@ class Second extends Component {
                             <span className="img_1"></span>
                             <div className="title_1">
                                 <h3>二手房车
-                                <i class="iconfont icon-shuzhuangtu">
+                                <i className="iconfont icon-shuzhuangtu">
                                         <span>1</span>
                                     </i>
                                 </h3>
@@ -89,9 +89,7 @@ class Second extends Component {
                     </div>
                 </div>
                 <div className="list_q">
-                    {/* <span className="list_w">
-                        全部
-                    </span> */}
+                  
                     {
                         topList.map(item => {
                             // console.log(this.path)
@@ -112,9 +110,10 @@ class Second extends Component {
                     <i className="iconfont icon-quxiaozhiding"></i>
                     <span>房车之家二手房车板块管理条例</span>
                 </div>
-                <div className="oneList">
+                {/* <div className="oneList">
+                    
+                  
                     <li className="list-item">
-
                         <div className="car-img">
                             <img alt="上海二手房车2017年上牌大通原厂C型房车店里现车多" style={{
                                 width: "500",
@@ -134,10 +133,9 @@ class Second extends Component {
                                 </div>
                             </div>
                         </div>
-
-
                     </li>
-                </div>
+
+                </div> */}
 
                 <Switch>
                     <Route path="/second/all" component={All} ></Route>
@@ -150,6 +148,9 @@ class Second extends Component {
             </>
 
         );
+    }
+    componentDidMount(){
+        
     }
 }
 export default Second;

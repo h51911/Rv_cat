@@ -13,4 +13,5 @@ router.get('/home', async (req, res, next) => {
   let data = await find('home');
   res.json(data);
 });
+
 module.exports = router;

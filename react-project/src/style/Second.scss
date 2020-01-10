@@ -154,14 +154,19 @@
 }
 
 .oneList {
-    background: #ffffff;
-    margin-bottom: .1rem;;
+    // background: #ffffff;
+    margin-bottom: .1rem;
+    ;
 
     .list-item {
+        background: #ffffff;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 3px;
 
         .car-img {
+            // border: 1px solid red;
+
             img {
                 width: 3.2rem;
                 height: 2.133333rem;
@@ -175,10 +180,27 @@
             // border: 1px solid red;
             margin-right: .1rem;
 
+            .car-name {
+                display: block;
+
+                width: 6.133333rem;
+                height: .96rem;
+                // border: 1px solid red;
+            }
+
             h3 {
                 font-size: .426667rem;
                 color: #495056;
                 margin-bottom: .133333rem;
+                // text-overflow: ellipsis;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
+                // white-space: wrap
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
             }
 
             .ar-km {

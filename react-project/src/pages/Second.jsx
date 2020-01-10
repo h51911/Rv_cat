@@ -89,7 +89,7 @@ class Second extends Component {
                     </div>
                 </div>
                 <div className="list_q">
-                  
+
                     {
                         topList.map(item => {
                             // console.log(this.path)
@@ -149,8 +149,8 @@ class Second extends Component {
 
         );
     }
-    componentDidMount(){
-        
+    componentDidMount() {
+
     }
 }
 export default Second;

@@ -1,0 +1,334 @@
+@function vw($px) {
+  @return ($px / 375) * 100vw;
+}
+
+.space{
+  ul,
+  ol {
+    list-style-type: none;
+    list-style-image: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #444;
+  }
+  
+  //左边箭头
+  .c-main4 {
+    position: absolute;
+    top: vw(-34);
+    left: vw(-85);
+    display: inline-block;
+    border-top: vw(2) solid;
+    border-right: vw(2) solid;
+    width: vw(12);
+    height: vw(12);
+    border-color: #fff;
+    transform: rotate(-135deg);
+    margin: vw(50) auto auto vw(100);
+    // margin-left: vw(4);
+    // padding-left: vw(4);
+  }
+  
+  .rv_hykj {
+    height: vw(250);
+    position: relative;
+    background: url(https://www.rv28.com/rv28/touch/h1.jpg) no-repeat 0 0;
+    background-size: cover;
+  }
+  
+  // .rv_tbys {
+  //   background: rgba(0, 0, 0, 0.1);
+  // }
+  
+  .rv_tbys {
+    width: 100%;
+    height: vw(45);
+    line-height: vw(45);
+    background: #4284d9;
+    text-align: center;
+  }
+  
+  // .rv_tbys {
+  //   background: rgba(0, 0, 0, 0.1);
+  // }
+  
+  .cl {
+    zoom: 1;
+  }
+  
+  .rv_tbys {
+    .topnav {
+      height: vw(45);
+      text-align: center;
+      color: #FFFFFF;
+      font-size: vw(16);
+      margin-left: vw(20);
+    }
+  }
+  
+  .pl10 {
+    padding-left: vw(10);
+  }
+  
+  .fl,
+  .z {
+    float: left;
+  }
+  
+  // 字体图标
+  .rv_tbys {
+    .topnav i {
+      font-size: vw(20);
+      color: #fff;
+    }
+  }
+  
+  .fr,
+  .y {
+    float: right;
+  }
+  
+  // 头像部分
+  .rv_hykj {
+    .rv_txdh {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: vw(-25);
+    }
+  }
+  
+  .rv_hykj {
+    .rv_txdh {
+      .rv_txdhb {
+        padding: 0 vw(20);
+      }
+    }
+  }
+  
+  .rv_hykj {
+    .rv_txdh {
+      .rv_txdhb {
+        .rv_kjtx {
+          width: 30%;
+  
+          img {
+            width: vw(80);
+            background: #fff;
+            padding: vw(2);
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .rv_hykj {
+    .rv_txdh {
+      .rv_txdhb {
+        .rv_kjdh {
+          width: 70%;
+  
+          h2 {
+            font-size: vw(20);
+            color: #fff;
+            line-height: vw(35);
+            font-weight: 400;
+            text-shadow: 0 0 vw(8) #000;
+          }
+  
+          p {
+            font-size: vw(13);
+            height: vw(29);
+            line-height: vw(24);
+            color: #fff;
+            text-shadow: 0 0 vw(8) #000;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .rv_wdkjzt {
+    margin: vw(20) 0;
+  }
+  
+  .rv_wdkjzt {
+    padding: vw(0);
+  
+    .rv_hykjzl {
+      margin: vw(40) 0 vw(20) 0;
+      padding: 0 vw(20);
+      background: #fff;
+  
+      li {
+        height: vw(50);
+        line-height: vw(50);
+        border-bottom: vw(1) solid #ececec;
+  
+        i {
+          width: 70%;
+          height: vw(50);
+          line-height: vw(50);
+          float: right;
+          font-size: vw(17);
+          color: #333;
+          overflow: hidden;
+        }
+  
+        a {
+          height: vw(50);
+          line-height: vw(50);
+          font-size: vw(15);
+          color: #999;
+        }
+      }
+  
+      .rv_fbztlj {
+        // background-position: right vw(18);
+        // background-size: vw(15) auto;
+        background: url(https://www.rv28.com/rv28/touch/kjxz.png) 0 0 no-repeat;
+      }
+    }
+  }
+  
+  
+  
+  .rv_wdkjzt {
+    .rv_hykjzl {
+      .rv_fbztlj {
+        background-position: right vw(18);
+        background-size: vw(15) auto;
+      }
+  
+    }
+  }
+  
+  .rv_wdkjzt {
+    .rv_hykjzl {
+      li {
+        i {
+          // display: flex;
+  
+          a {
+            font-size: vw(17);
+            color: #333;
+            display: block;
+  
+          }
+        }
+      }
+  
+      // .hyewm {
+      //   background-position: 0;
+      //   background-size: vw(25) auto;
+      // }
+    }
+  }
+  
+  i {
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  // 二维码
+  .rv_wdkjzt .rv_hykjzl .hyewm {
+    background: url(https://www.rv28.com/rv28/touch/kjewm.png) 0 0 no-repeat;
+  }
+  
+  .rv_wdkjzt {
+    .rv_hykjzl {
+      .hyewm {
+        background-position: 0;
+        background-size: vw(25) auto;
+      }
+    }
+  }
+  
+  
+  // 编辑资料
+  // .rv_wdkjzt {
+  //   .rv_hyzlcz {
+  //     text-align: center;
+  //   }
+  
+  // }
+  
+  
+  // .rv_wdkjzt {
+  //   .rv_hyzlcz {
+  //     text-align: center;
+  //     // background-color: #666666;
+  //     .rv_hyzlly {
+  //       background: #fff;
+  //     }
+  
+  //   }
+  // }
+  
+  .rv_wdkjzt {
+    .rv_hyzlcz {
+      height: vw(48);
+      line-height: vw(48);
+      margin: vw(20) vw(20) 0 vw(20);
+      position: relative;
+      border-radius: vw(3);
+      z-index: 2;
+      overflow: hidden;
+      text-align: center;
+      background: #4284D9;
+  
+      a {
+        font-size: vw(16);
+        color: #fff;
+      }
+    }
+  
+  }
+  
+  
+  
+  // 关于我们
+  .footer {
+    padding-bottom: vw(60);
+    color: #999999;
+    background-color: #fff;
+    margin-top: vw(10);
+    line-height: vw(22);
+    padding-top: vw(18);
+    text-align: center;
+  
+    .opt-change {
+      color: #ECECEC;
+  
+      a {
+        font-size: vw(15);
+        color: #666666;
+      }
+  
+      em {
+        padding: 0px vw(4);
+      }
+    }
+  
+    .copyright {
+      font-size: vw(12);
+      width: 80%;
+      border-top: 1px solid #F5F5F5;
+      margin: vw(16) auto;
+      text-align: center;
+      padding-top: vw(18);
+    }
+  }
+  
+   em, th, var, i {
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+

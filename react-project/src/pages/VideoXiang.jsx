@@ -42,8 +42,10 @@ class VideoXiang extends React.Component {
                 <div className="video">
                     <video
                         controls
-                        poster={data.poster}>
-                        <source type="video/mp4" src={data.videosrc} />
+                        poster={data.poster}
+                        src={data.videosrc}
+                    >
+                        {/* <source type="video/mp4" src={data.videosrc} /> */}
                     </video>
                 </div>
                 <h1>{data.title}</h1>

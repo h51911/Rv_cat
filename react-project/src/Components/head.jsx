@@ -123,7 +123,7 @@ class Head extends React.Component {
                     <div className="nav">
                         <p className="p_1" onClick={this.goback}>
 
-                            <span className="span_1 iconfont icon-jiantou2"></span>
+                            <span className="span_1 iconfont icon-fanhui"></span>
                             <span className="span_2">返回</span>
 
                         </p>

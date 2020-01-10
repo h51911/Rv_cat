@@ -26,4 +26,28 @@ router.get('/videoxiang', async (req, res, next) => {
   let data = await find('videoxiang', { id: id * 1 });
   res.json(data);
 });
+//注册
+router.post('/reg', async (req, res, next) => {
+  res.append('Access-Control-Allow-Origin', '*');
+  let { username, password } = req.body;
+  let data = await insertMany('user', [{ username, password }]);
+  console.log(data);
+
+  res.json(data);
+});
+//验证
+router.get('/yanzheng', async (req, res, next) => {
+  res.append('Access-Control-Allow-Origin', '*');
+  let { username } = req.query;
+  let data = await find('user', { username });
+  console.log(data);
+  res.json(data);
+});
+//登录
+router.post('/login', async (req, res, next) => {
+  res.append('Access-Control-Allow-Origin', '*');
+  let { username, password } = req.body;
+  let data = await find('user', { username, password });
+  res.json(data);
+});
 module.exports = router;

@@ -9,7 +9,7 @@ class Second extends Component {
 
         return (
             <>
-                <Head></Head>
+                <Head>二手房车</Head>
                 <div>二手车界面</div>
             </>
 

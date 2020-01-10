@@ -7,6 +7,9 @@ import Second from './pages/Second.jsx';
 import Mine from './pages/Mine.jsx';
 import Video from './pages/Video.jsx';
 import VideoXiang from './pages/VideoXiang.jsx';
+import Reg2 from './pages/Reg2.jsx';
+import Login2 from './pages/Login2.jsx';
+import Space from './pages/Space.jsx';
 
 import './style/font_hr5tn4apse8/iconfont.css';
 import { TabBar } from 'antd-mobile';
@@ -24,11 +27,14 @@ class App extends React.Component {
           <Route path='/choose' component={Choose} />
           <Route path='/second' component={Second} />
           <Route path='/mine' component={Mine} />
-          <Route path='/video' component={Video} exact />
+          <Route path='/video2' component={Video} exact />
           <Route path="/detailpage" component={DetailPage} />
           <Route path="/list" component={List} />
+          <Route path='/reg2' component={Reg2} />
+          <Route path='/login2' component={Login2} />
+          <Route path='/space' component={Space} />
           {/*嵌套路由*/}
-          <Route path='/video/xiang/:id' component={VideoXiang} />
+          <Route path='/video2/xiang/:id' component={VideoXiang} />
           <Route path='/notfound' render={() => <h1>你访问的页面不存在</h1>} />
           {/* "/" 跳转到 "/home" */}
           <Redirect from="/" to="/home" exact />

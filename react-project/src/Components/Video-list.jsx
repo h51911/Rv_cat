@@ -23,7 +23,7 @@ class VideoList extends React.Component {
         });
     }
     xiangqing(vid) {
-        this.props.history.push(`/video/xiang/${vid}`);
+        this.props.history.push(`/video2/xiang/${vid}`);
     }
     chao(page) {
         let shuX = 12 * page;

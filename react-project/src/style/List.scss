@@ -102,6 +102,7 @@
 }
 
 /* 车型 */
+.list_pic,
 .list_car {
     ul {
         li {
@@ -139,6 +140,82 @@
                     strong {
                         color: #f60;
                     }
+                }
+            }
+        }
+    }
+}
+
+/* 图库 */
+// .list_pic{
+
+// }
+
+.list_article {
+    ul {
+        li {
+            width: 6.64rem;
+            height: 1.68rem;
+            padding-right: 2.56rem;
+            padding-bottom: .373333rem;
+            margin: 0 .4rem;
+            position: relative;
+            margin-top: .533333rem;
+            border-bottom: .026667rem solid #ccc;
+
+            a {
+                text-decoration: none;
+                background: black;
+
+                .detail {
+                    widows: 6.64rem;
+                    height: 1.68rem;
+                    // float: left;
+
+                    h3 {
+                        width: 6.64rem;
+                        height: 1.066667rem;
+                        font-size: .426667rem;
+                        /*单行超出隐藏 */
+                        // overflow: hidden;
+                        // text-overflow: ellipsis;
+                        // white-space: nowrap;
+
+                        /* 多行超出隐藏 */
+                        -webkit-line-clamp: 2;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .time {
+                        height: .373333rem;
+                        color: #ababab;
+                        font-size: .32rem;
+                        line-height: .373333rem;
+                        margin-top: 8px;
+
+                        .icon-pinglun {
+                            display: inline-block;
+                           margin: 0 .106667rem;
+                            // width: .533333rem;
+                            // height: .533333rem;
+                            font-size: .426667rem;
+                        }
+                    }
+                }
+            }
+
+            .pic {
+                // float: left;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                img {
+                    width: 2.4rem;
+                    height: 1.6rem;
                 }
             }
         }

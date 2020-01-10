@@ -79,12 +79,12 @@ class Brand extends Component {
         title: "新飞祥菱"
       }
     ],
-    recommendprice: ["10-30万", "30-50万", "自行C型", "自行B型"]
+    recommendprice: ["10-30万", "30-50万", "自行C型", "自行B型"],
+    letter: "A"
   };
 
   /* 字母导航 */
-  changeNav = (item, index) => {
-    // console.log(item);
+  changeNav = item => {
     this.setState({
       key: item,
       isok: "block"
@@ -95,14 +95,15 @@ class Brand extends Component {
         isok: "none"
       });
     }, 1000);
-    // console.log(item);
-
-    // console.log(this.refs, index);
+    // console.log("this.refs", this.refs);
+    if (item == this.state.letter) {
+      console.log(6666666);
+    }
   };
 
   /* 跳转列表 */
   toList(data) {
-    let {img,title,id} = data;
+    let { img, title, id } = data;
     // console.log(title);
     // console.log(this.refs.outer);
     /* index 大分类          idx小分类*/
@@ -110,7 +111,7 @@ class Brand extends Component {
     // let { div } = this.refs;
     // console.log(this.refs);
     this.props.dispatch({
-     type: "list",
+      type: "list",
       payload: [img, title, id]
     });
 
@@ -239,11 +240,7 @@ class Brand extends Component {
                           <li
                             key={ele.title}
                             // onClick={this.toList.bind(this, index, idx)}
-                            onClick={this.toList.bind(
-                              this,
-                              ele
-                            )}
-                            ref="item"
+                            onClick={this.toList.bind(this, ele)}
                           >
                             <a>
                               <img src={ele.img} alt="" />

@@ -1,0 +1,30 @@
+.ad {
+    ul {
+        margin-top: .266667rem;
+
+        li {
+            width: 3.048747rem;
+            height: 2.540427rem;
+            margin: .08rem;
+            position: relative;
+            float: left;
+
+            img {
+                width: 3.048747rem;
+                height: 2.540427rem;
+            }
+
+            p {
+                width: 100%;
+                height: .453333rem;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.6);
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                font-size: .373333rem;
+                line-height: .453333rem;
+            }
+        }
+    }
+}

@@ -53,7 +53,7 @@ class All extends Component {
                                     <img alt="上海二手房车2017年上牌大通原厂C型房车店里现车多" style={{
                                         width: "500",
                                         display: 'block'
-                                    }} src={item.src} />
+                                    }} src="https://www.rv28.com/data/attachment/forum/threadcover/de/43/21162.jpg" />
 
                                 </div>
                                 <div className="car-list">

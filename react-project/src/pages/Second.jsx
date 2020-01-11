@@ -142,15 +142,13 @@ class Second extends Component {
                     <Route path='/second/buy' component={Buy}></Route>
                     <Route path='/second/sell' component={Sell}></Route>
                     <Route path='/second/sold' component={Sold}></Route>
-                    {/* <Redirect from='/second' to="/second/all" exact /> */}
+                    <Redirect from='/second' to="/second/all" exact />
                 </Switch>
                 <AboutUs></AboutUs>
             </>
 
         );
     }
-    componentDidMount() {
-
-    }
+  
 }
 export default Second;

@@ -57,6 +57,7 @@ class Brand extends Component {
         title: "凤凰"
       }
     ],
+
     recommendcar: [
       {
         img:
@@ -80,21 +81,29 @@ class Brand extends Component {
       }
     ],
     recommendprice: ["10-30万", "30-50万", "自行C型", "自行B型"],
-    letter: "A"
+    letter: "A",
+    h: 0
   };
 
   /* 字母导航 */
   changeNav = (item, index) => {
+    let h = this.refs.abc.children[index].offsetTop + 20.5;
     this.setState({
-      key: item,
-      isok: "block"
+      h
     });
-    /* 1秒后隐藏 */
-    setTimeout(() => {
+    window.scrollTo(0, h);
+    if (this.state.h != h) {
       this.setState({
-        isok: "none"
+        key: item,
+        isok: "block"
       });
-    }, 1000);
+      /* 1秒后隐藏 */
+      setTimeout(() => {
+        this.setState({
+          isok: "none"
+        });
+      }, 500);
+    }
   };
 
   /* 跳转列表 */
@@ -149,8 +158,8 @@ class Brand extends Component {
       <div className="brand" style={{ background: "white" }}>
         {/* <div>Brand</div> */}
         {/* 右边导航 */}
-        <div className="nav">
-          <ul>
+        <div className="nav" >
+          <ul ref="zimu">
             {navData.map((item, index) => {
               return (
                 <li key={item} onClick={this.changeNav.bind(this, item, index)}>
@@ -215,10 +224,10 @@ class Brand extends Component {
           </div>
 
           {/* ABCD >>>>>>>>>>>>>>>>>>>>》》》》》》》*/}
-          <div className="boxcar">
+          <div className="boxcar" ref="abc">
             {data.map((item, index) => {
               return (
-                <div className="list" key={item.title} ref="abc">
+                <div className="list" key={item.title}>
                   {/* -----标题------- */}
                   <div
                     className="car_title"

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import "../../style/pageAll.scss";
+// import "../../style/pageAll.scss";
+import DetailShare from "../DetailShare";
+import WenZhang from "./WenZhang";
+import Ad from "../Ad";
 class ZongShu extends Component {
   render() {
     let { data } = this.props;
@@ -8,6 +11,7 @@ class ZongShu extends Component {
 
     return (
       <div className="car1">
+        <DetailShare></DetailShare>
         <div className="top">
           <div className="show">
             <div className="left">
@@ -52,6 +56,34 @@ class ZongShu extends Component {
             </div>
           </div>
         </div>
+
+        {/* 参数配置 */}
+        <div className="car-price-card">
+          <div className="scroll-item">
+            <ul>
+              <li>
+                <strong>参数配置</strong>
+                <p>排量2.4L 3床</p>
+              </li>
+              <li>
+                <strong>参数配置</strong>
+                <p>排量2.4L 3床</p>
+              </li>
+              <li>
+                <strong>参数配置</strong>
+                <p>排量2.4L 3床</p>
+              </li>
+              <li>
+                <strong>参数配置</strong>
+                <p>排量2.4L 3床</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <Ad></Ad>
+        <div style={{ width: "100%", height: "15px" }}></div>
+        <WenZhang></WenZhang>
       </div>
     );
   }

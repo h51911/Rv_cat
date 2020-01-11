@@ -8,7 +8,8 @@ import { Tabs, WhiteSpace } from "antd-mobile";
 import { StickyContainer, Sticky } from "react-sticky";
 
 /* 头部 */
-import Header from "../components/Header";
+// import Header from "../components/Header";
+import Header from "../components/head";
 
 /* 切换 */
 import Brand from "../components/Brand";
@@ -49,8 +50,9 @@ class Choose extends React.Component {
     return (
       <div className="choose">
         {/* 头部 */}
-        <Header></Header>
-
+        {/* <Header></Header> */}
+        <Header>详情</Header>
+        {/* <Share>详情</Share> */}
         {/* 切换 */}
         <div className={"Tab"}>
           {list.map(item => {

@@ -84,7 +84,7 @@ class Brand extends Component {
   };
 
   /* 字母导航 */
-  changeNav = item => {
+  changeNav = (item, index) => {
     this.setState({
       key: item,
       isok: "block"
@@ -95,10 +95,6 @@ class Brand extends Component {
         isok: "none"
       });
     }, 1000);
-    // console.log("this.refs", this.refs);
-    if (item == this.state.letter) {
-      console.log(6666666);
-    }
   };
 
   /* 跳转列表 */
@@ -133,7 +129,7 @@ class Brand extends Component {
 
   /* 滚动 */
   handleScroll(index) {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     // console.log("this.refs", this.refs);
   }
 
@@ -157,7 +153,7 @@ class Brand extends Component {
           <ul>
             {navData.map((item, index) => {
               return (
-                <li key={item} onClick={this.changeNav.bind(this, item)}>
+                <li key={item} onClick={this.changeNav.bind(this, item, index)}>
                   <a>{item}</a>
                 </li>
               );
@@ -222,12 +218,11 @@ class Brand extends Component {
           <div className="boxcar">
             {data.map((item, index) => {
               return (
-                <div className="list" key={item.title}>
+                <div className="list" key={item.title} ref="abc">
                   {/* -----标题------- */}
                   <div
                     className="car_title"
                     onChange={this.handleScroll.bind(this, index)}
-                    ref="abc"
                   >
                     <span>{item.title}</span>
                   </div>

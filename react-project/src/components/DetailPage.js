@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../components/Header";
+import Header from "../components/head";
 import "../style/DetailPage.scss";
 import { Switch, Route } from "react-router-dom";
 
@@ -13,6 +13,8 @@ import ShangJia from "./page/ShangJia";
 import LunTan from "./page/LunTan";
 import ErShou from "./page/ErShou";
 
+import Second from "../pages/Second";
+
 class DetailPage extends Component {
   state = {
     navBar: [
@@ -24,7 +26,7 @@ class DetailPage extends Component {
       { text: "视频", path: "/shipin" },
       { text: "商家", path: "/shangjia" },
       { text: "论坛", path: "/luntan" },
-      { text: "二手车", path: "/ershou" }
+      { text: "二手车", path: "/second" }
     ],
     key: "/zongshu"
   };
@@ -34,18 +36,24 @@ class DetailPage extends Component {
     this.setState({
       key: path
     });
-    this.props.history.push("/detailpage" + path);
+    // this.props.history.push("/detailpage" + path);
+    this.props.history.push(
+      path == "/second" ? "/second" : "/detailpage" + path
+    );
   };
   componentDidMount() {
     // this.key = "zongshu";
-    this.props.history.push("/detailpage" + this.state.key);
+    // this.props.history.push("/detailpage" + this.state.key);
+    this.props.history.push(
+      this.state.key == "/second" ? "/second" : "/detailpage" + this.state.key
+    );
   }
 
   render() {
     let { navBar, key } = this.state;
     return (
       <>
-        <Header></Header>
+        <Header>详情</Header>
         <div className="detail_list">
           <ul>
             {navBar.map(item => {
@@ -71,7 +79,7 @@ class DetailPage extends Component {
           <Route path="/detailpage/shipin" component={ShiPin}></Route>
           <Route path="/detailpage/shangjia" component={ShangJia}></Route>
           <Route path="/detailpage/luntan" component={LunTan}></Route>
-          <Route path="/detailpage/ershou" component={ErShou}></Route>
+          <Route path="/second" component={Second}></Route>
         </Switch>
       </>
     );

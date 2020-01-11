@@ -1,7 +1,7 @@
 //头部组件
 
 import React from "react";
-import "../style/Head.scss";
+import "../style/Share.scss";
 import { withRouter } from "react-router-dom";
 //引入字体图标
 // import '../assets/iconfont/iconfont.css'
@@ -118,40 +118,9 @@ class Head extends React.Component {
         <WingBlank>
           {/* <Button onClick={this.showModal('modal1')}><Icon type="up" />basic<Icon type="up" /></Button> */}
 
-          <Modal
-            visible={this.state.modal1}
-            transparent
-            maskClosable={false}
-            onClose={this.onClose("modal1")}
-            title="Title"
-            footer={[
-              {
-                text: "Ok",
-                onPress: () => {
-                  console.log("ok");
-                  this.onClose("modal1")();
-                }
-              }
-            ]}
-            wrapProps={{ onTouchStart: this.onWrapTouchStart }}
-            // afterClose={() => { alert('afterClose'); }}
-          ></Modal>
-
-          <div className="nav">
-            <p className="p_1" onClick={this.goback}>
-              <span className="span_1 iconfont icon-fanhui"></span>
-              <span className="span_2">返回</span>
-            </p>
-            <div className="p_2">
-              <span onClick={this.showModal("modal2")}>
-                {this.props.children}
-              </span>
-              <i className=" i_1 iconfont icon-jiantou-copy-copy"></i>
-            </div>
-            <p className="p_3" onClick={this.shouye}>
-              首页
-            </p>
-          </div>
+          <span onClick={this.showModal("modal2")}>
+            {this.props.children}55555555555
+          </span>
 
           <Modal
             popup

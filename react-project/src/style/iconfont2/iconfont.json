@@ -20,6 +20,27 @@
       "unicode_decimal": 59023
     },
     {
+      "icon_id": "4155526",
+      "name": "隐藏",
+      "font_class": "yincang",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "8807360",
+      "name": "收 藏",
+      "font_class": "collect",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "9660256",
+      "name": "收 藏",
+      "font_class": "shoucang",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
       "icon_id": "10140597",
       "name": "QQ",
       "font_class": "QQ",

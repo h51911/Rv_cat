@@ -1,10 +1,12 @@
 import React from "react";
 import "../style/Home.scss";
+import { withRouter } from 'react-router-dom';
 import noavatar from "../assets/noavatar_middle.gif";
 import Lunbotu from "../components/Lunbotu.jsx";
 import Buytop from "../components/Buytop.jsx";
 import Pb from "../components/Pb.jsx";
 import AboutUs from "../components/AboutUs.js";
+import Backtop from "../components/Backtop.jsx";
 
 class Home extends React.Component {
   constructor() {
@@ -19,6 +21,9 @@ class Home extends React.Component {
       ]
     };
   }
+  search = () => {
+    this.props.history.push("/search");
+  }
   render() {
     return (
       <div className="home">
@@ -32,7 +37,7 @@ class Home extends React.Component {
               alt=""
             />
           </div>
-          <div className="head-right">
+          <div className="head-right" onClick={this.search}>
             <span className="iconfont icon-fangdajing"></span>
           </div>
         </div>
@@ -43,8 +48,10 @@ class Home extends React.Component {
           <Pb />
         </main>
         <AboutUs></AboutUs>
+        <Backtop></Backtop>
       </div>
     );
   }
 }
+Home = withRouter(Home)
 export default Home;

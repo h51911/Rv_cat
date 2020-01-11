@@ -10,6 +10,7 @@ import VideoXiang from './pages/VideoXiang.jsx';
 import Reg2 from './pages/Reg2.jsx';
 import Login2 from './pages/Login2.jsx';
 import Space from './pages/Space.jsx';
+import Search from './pages/Search';
 
 import './style/font_hr5tn4apse8/iconfont.css';
 import { TabBar } from 'antd-mobile';
@@ -33,6 +34,7 @@ class App extends React.Component {
           <Route path='/reg2' component={Reg2} />
           <Route path='/login2' component={Login2} />
           <Route path='/space' component={Space} />
+          <Route path='/search' component={Search} />
           {/*嵌套路由*/}
           <Route path='/video2/xiang/:id' component={VideoXiang} />
           <Route path='/notfound' render={() => <h1>你访问的页面不存在</h1>} />

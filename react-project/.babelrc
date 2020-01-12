@@ -1,0 +1,12 @@
+{ //UI按需加载优化
+    "plugins": [
+        "@babel/plugin-syntax-dynamic-import",
+        [
+            "import",
+            {
+                "libraryName": "antd-mobile",
+                "style": "css" // `style: true` 会加载 less 文件
+            }
+        ]
+    ]
+}

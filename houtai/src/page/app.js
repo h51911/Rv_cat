@@ -65,7 +65,7 @@ class sApp extends React.Component {
         defaultSelectedKeys={['2']}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="1">老五游后台管理系统</Menu.Item>
+        <Menu.Item key="1">房猫车后台管理系统</Menu.Item>
         <Menu.Item key="2">{username}，欢迎您</Menu.Item>
         <Menu.Item key="3" onClick={this.loginOut}>退出登录</Menu.Item>
         {/* <Menu.Item key="2">nav 2</Menu.Item>
@@ -100,17 +100,17 @@ class sApp extends React.Component {
             title={
               <span>
                 <Icon type="laptop" />
-              景区管理
+              管理员中心
               </span>
             }
           >
             <Menu.Item key="5" onClick={()=>{
               history.push('/allshop')
-            }}>查询所有景区</Menu.Item>
+            }}>查询所有房车</Menu.Item>
                     <Menu.Item key="6" onClick={() => {
                       history.push('/addgoods')
-                    }}>添加商品</Menu.Item>
-            <Menu.Item key="7">修改景区相关信息</Menu.Item>
+                    }}>添加房车信息</Menu.Item>
+            <Menu.Item key="7">修改房车相关信息</Menu.Item>
             <Menu.Item key="8"></Menu.Item>
           </SubMenu>
           <SubMenu
@@ -118,13 +118,13 @@ class sApp extends React.Component {
             title={
               <span>
                 <Icon type="notification" />
-                订单管理
+                房车订单管理
               </span>
             }
           >
             <Menu.Item key="9" onClick={()=>{
               history.push('/orderinfo')
-            }}>查看所有订单</Menu.Item>
+            }}>查看房车订单</Menu.Item>
             <Menu.Item key="10">option10</Menu.Item>
             <Menu.Item key="11">option11</Menu.Item>
             <Menu.Item key="12">option12</Menu.Item>

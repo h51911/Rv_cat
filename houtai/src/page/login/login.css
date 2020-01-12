@@ -17,16 +17,3 @@
 .login-form-forgot {
   margin-left: 70px;
 }
-
-.box {
-  position: relative;
-}
-
-h2 {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  font-weight: bold;
-  font-size: 30px;
-  color: #ffffff;
-}

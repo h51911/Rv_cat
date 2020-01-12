@@ -20,7 +20,7 @@ class Cancel extends React.Component{
                     </thead>
                     <tbody>
                         <tr>
-                            <td>邓育振</td>
+                            <td>吴文峰</td>
                             <td>123456</td>
                             <td><Button>删除</Button></td>
                         </tr>

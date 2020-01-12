@@ -5,15 +5,15 @@ import "./index.css";
 import "./style/base.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { HashRouter } from "react-router-dom";
+import { HashRouter, BrowserRouter } from "react-router-dom";
 import "antd-mobile/dist/antd-mobile.css";
 import { Provider } from "react-redux";
 const Router = process.env.NODE_ENV === 'development' ? HashRouter : BrowserRouter
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <Router>
       <App />
-    </HashRouter>
+    </Router>
   </Provider>,
   document.getElementById("root")
 );

@@ -1,0 +1,10 @@
+.ssuccess h3 {
+  font-size: 30px;
+  color: #1e49d6;
+}
+
+.ssuccess p {
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}

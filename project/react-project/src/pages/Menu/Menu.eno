@@ -1,0 +1,88 @@
+<template name="Menu">
+    <div className="menu">
+        <ul>
+            <p>欢迎使用</p>
+            <p>桂林电子科技大学北海校区————制作人：袁超</p>
+            <p>请选择相应的子功能模块</p>
+
+            <li className="l1">
+                <Link to="/login?id=1">学生选课系统</Link>
+            </li>
+
+            <li className="l2">
+                <Link to="/login?id=2">教师信息系统</Link>
+            </li>
+
+            <li className="l3">
+                <Link to="/login?id=3">教务管理系统</Link>
+            </li>
+            <p>技术支持：桂林电子科技大学计算机工程学院——袁超</p>
+            <p>指导老师：老谢</p>
+        </ul>
+    </div>
+</template>
+<script>
+    import {
+        // HashRouter as Router,
+        // Switch,
+        // Route,
+        Link
+    } from "react-router-dom";
+    export default {}
+</script>
+<style lang="sass">
+    .menu {
+        overflow: hidden;
+        height: 100vh;
+        background-color: #6699CC;
+
+        a:hover {
+            color: #0000FF;
+        }
+
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        ul {
+            width: 450px;
+            margin: 125px auto;
+        }
+
+        p {
+            color: #FFF;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        li {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .l1 {
+
+            border: 1px solid #000;
+            height: 30px;
+
+        }
+
+        .l2 {
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .l3 {
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+</style>

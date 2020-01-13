@@ -1,0 +1,16 @@
+.addteacher .ant-input-affix-wrapper {
+  margin-bottom: 10px;
+  width: 280px;
+  display: block;
+}
+
+.addteacher .tishi {
+  color: red;
+}
+
+.addteacher .biaoti {
+  height: 100%;
+  font-size: 25px;
+  margin-right: 20px;
+  color: #1890ff;
+}

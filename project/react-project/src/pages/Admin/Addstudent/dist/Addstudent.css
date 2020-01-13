@@ -1,0 +1,16 @@
+.addstudent .ant-input-affix-wrapper {
+  margin-bottom: 10px;
+  width: 280px;
+  display: block;
+}
+
+.addstudent .tishi {
+  color: red;
+}
+
+.addstudent .biaoti {
+  height: 100%;
+  font-size: 25px;
+  margin-right: 20px;
+  color: #1890ff;
+}
